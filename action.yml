@@ -1,0 +1,17 @@
+name: 'Setup task'
+description: >
+  Install task for your GitHub Action workflows.
+
+inputs:
+  version:
+    description: 'The version of task to install.'
+    required: true
+    default: '2.8.1'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
+
+branding:
+  icon: 'circle'
+  color: 'blue'

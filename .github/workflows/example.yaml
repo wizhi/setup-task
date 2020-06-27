@@ -1,0 +1,17 @@
+name: A usage example
+
+on: push
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ./
+        with:
+          version: 2.8.1
+
+      - run: ls -la /opt/hostedtoolcache/task/2.8.1/amd64
+
+      - run: task -h
